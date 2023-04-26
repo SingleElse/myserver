@@ -16,6 +16,7 @@ const getTotal = async () => {
   }
 };
 
+
 const getSelectOne = async (id) => {
 
   try {
@@ -50,6 +51,7 @@ const getList = async (req) => {
   }
 };
 
+
 const todoController = {
 
   create: async (req) => {
@@ -75,6 +77,7 @@ const todoController = {
     }
   },
 
+
   list: async (req) => {
     const totalCount = await getTotal();
     const list = await getList(req);
@@ -89,6 +92,7 @@ const todoController = {
       return resData(STATUS.S201.result, STATUS.S201.resultDesc, moment().format('LT'));
     }
   },
+
 
   update: async (req) => {
     const { id } = req.params; 
@@ -113,6 +117,7 @@ const todoController = {
       return resData(STATUS.E300.result, STATUS.E300.resultDesc, moment().format('LT'));
     }
   },
+
 
   delete: async (req) => {
     const { id } = req.params;
@@ -144,6 +149,7 @@ const todoController = {
     }
     return rows;
   },
+
 
   reset: async (req) => {
     try {

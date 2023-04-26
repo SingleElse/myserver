@@ -14,3 +14,5 @@ const STATUS = {
   };
 
   module.exports = STATUS;
+
+  // 상태를 정의하는 거!
